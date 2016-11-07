@@ -48,6 +48,7 @@ pub enum ApiMsg {
     GetScrollLayerState(IpcSender<Vec<ScrollLayerState>>),
     RequestWebGLContext(Size2D<i32>, GLContextAttributes, IpcSender<Result<(WebGLContextId, GLLimits), String>>),
     WebGLCommand(WebGLContextId, WebGLCommand),
+    SuperScroll,
 }
 
 #[derive(Clone, Deserialize, Serialize)]
